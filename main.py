@@ -1,4 +1,4 @@
-# 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
+
 import streamlit as st # for web page
 import fitz # This is PyMuPDF (import it like this)
 import re # regular expression (extract mail,date,pass, phone no.)
