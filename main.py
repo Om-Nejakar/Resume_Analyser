@@ -8,8 +8,8 @@ from fpdf import FPDF # to convert text to pdf
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+api_key = st.secrets["OPENAI_API_KEY"]
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
