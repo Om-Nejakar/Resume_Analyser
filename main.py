@@ -46,7 +46,7 @@ if uploaded_file:
     if st.button("Ask AI") and user_prompt:
         with st.spinner("Thinking"):
             response = client.chat.completions.create(
-            model="google/gemma-3n-e4b-it:free",  # ai modal used 
+            model="meta-llama/llama-3.3-70b-instruct:free",  # ai modal used 
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {
