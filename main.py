@@ -10,10 +10,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
-try:
-    api_key = st.secrets["OPENAI_API_KEY"]
-except KeyError:
-    st.stop()
+# try:
+#     api_key = st.secrets["OPENAI_API_KEY"]
+# except KeyError:
+#     st.stop()
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
