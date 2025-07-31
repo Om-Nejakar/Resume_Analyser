@@ -44,6 +44,7 @@ if uploaded_file:
             response = client.chat.completions.create(
             model="google/gemma-3n-e4b-it:free",  # ai modal used 
             messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
                 {
                     "role": "user", 
                     "content": f'''{user_prompt}\n\nHere is the resume:\n{full_text} 
