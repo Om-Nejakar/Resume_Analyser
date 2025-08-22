@@ -6,8 +6,8 @@ import os
 from openai import OpenAI
 
 # Gemini
-from google import genai
-from google.genai import types
+import google.generativeai as genai
+from google.generativeai import types
 
 
 def chatAi_ui(model_choice, start_chat):
@@ -58,13 +58,13 @@ def chatAi_ui(model_choice, start_chat):
 
                 # --- Gemini ---
                 elif model_choice.startswith("gemini"):
-                    client = genai.Client(api_key=api_key)
+                    genai.configure(api_key=api_key)
 
-                    response = client.models.generate_content(
-                        model=model_choice,  # e.g. "gemini-2.5-flash"
-                        contents=user_prompt,
-                        config=types.GenerateContentConfig(
-                            thinking_config=types.ThinkingConfig(thinking_budget=0)  # disables thinking
+                    model = genai.GenerativeModel(model_choice)  # e.g. "gemini-1.5-flash"
+                    response = model.generate_content(
+                        user_prompt,
+                        generation_config=types.GenerationConfig(
+                            # add extra options here if you want
                         ),
                     )
                     content = response.text
