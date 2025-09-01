@@ -1,7 +1,7 @@
 import streamlit as st
 
 def sidebar_ui():
-    st.header(":rainbow[ChatNova]", divider=True)
+    st.header(":rainbow[YouVa-Chat]", divider=True)
 
     if "mode" not in st.session_state:
         st.session_state.mode = False

@@ -8,7 +8,7 @@ with st.sidebar:
 
 if mode == "home":
     st.markdown(
-    "<h2 style='text-align: center;'>Welcome To all in One <span style='color: #1E90FF; text-decoration: underline;'>ChatNova</span> Platform</h2>",
+    "<h2 style='text-align: center;'>Welcome To all in One <span style='color: #1E90FF; text-decoration: underline;'>YouVa-Chat</span> Platform</h2>",
     unsafe_allow_html=True
     )
     st.image("https://cdn.pixabay.com/photo/2024/05/16/19/29/ai-generated-8766874_960_720.jpg")
