@@ -26,7 +26,9 @@ class MongoDBChat:
         """Retrieve chat messages for a session"""
         chat_doc = self.collection.find_one({"session_id": session_id})
         
-        return chat_doc.get("messages", [])
+        if chat_doc:
+            return chat_doc.get("messages", [])
+        return []
 
     def list_sessions(self):
         """Get all saved sessions"""
